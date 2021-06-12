@@ -1,0 +1,374 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    /* text-decoration: #fff; */
+    list-style: none;
+}
+
+body,
+html {
+    /* height: 100%;
+    margin: 0; */
+    background: #eee;
+    z-index: -1000;
+}
+
+.clear {
+    clear: both;
+}
+
+
+/*---------------------logo & sub-information------------------*/
+
+.jumbotron {
+    padding: 0;
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+
+.logo-subinfo {
+    width: 100%;
+    top: 0px;
+}
+
+.navbar-1 {
+    float: left;
+    width: 33%
+}
+
+.navbar-1>ul {
+    list-style: none;
+}
+
+.navbar-1 li {
+    text-align: center;
+    float: left;
+    padding: 30px 0 30px 0;
+    width: 30%;
+}
+
+.navbar-1 a {
+    color: black;
+    font-size: 1.1em;
+}
+
+.navbar-2 {
+    float: left;
+    width: 33%;
+}
+
+.navbar-2>ul {
+    list-style: none;
+}
+
+.navbar-2 li {
+    text-align: center;
+    float: left;
+    padding: 30px 0 30px 0;
+    width: 20%;
+}
+
+.navbar-2 a {
+    color: black;
+    font-size: 1.1em;
+}
+
+.clip-text {
+    font-size: 6em;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+    /*-------- chrome & safari*/
+    -webkit-background-clip: text;
+    -ms-background-clip: text;    
+    /*-------- end chrome & safari*/
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    float: left;
+    width: 34%;
+    text-align: center;
+    background-image: url(../../IMGS/background/7.jpg);
+}
+
+.clip-text a {
+    text-decoration: none;
+    font-family: 'Dr Sugiyama';
+}
+
+
+/*---------------------End logo & sub-information------------------*/
+
+
+/* -------------------Navigation Bar--------------------------- */
+
+.navigation-bar {
+    margin: 0 0 70px 0;
+    padding: 0;
+    background: #f3efef;
+}
+
+.navigation-bar ul {
+    padding: 0;
+    position: absolute;
+    background: white;
+    width: 100%;
+}
+
+.navigation-bar li {
+    display: inline-block;
+    transform-style: preserve-3d;
+    width: 19.7%;
+}
+
+.navigation-bar a {
+    color: black;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.navigation-bar span {
+    display: block;
+    padding: 15px 20px;
+    width: 100%;
+}
+
+.navigation-bar span:before {
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    color: white;
+    padding: 15px 20px;
+    transform-style: preserve-3d;
+    transition: .5s;
+    transform: rotateX(90deg) translateY(50px);
+    transform-origin: bottom;
+    width: 100%;
+    text-align: center;
+}
+
+.navigation-bar span:hover:before {
+    transform: rotateX(0deg) translateY(0px);
+}
+
+.navigation-bar span:after {
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(79, 79, 202);
+    color: white;
+    padding: 15px 20px;
+    transform-style: preserve-3d;
+    transition: .5s;
+    transform: rotateX(0deg) translateY(0px);
+    transform-origin: top;
+    font-family: 'Dr Sugiyama';
+    width: 100%;
+    text-align: center;
+}
+
+.navigation-bar span:hover:after {
+    transform: rotateX(90deg) translateY(-5px);
+}
+
+
+/* ------------------End Navigation Bar------------------------ */
+
+
+/* Footer */
+
+.site-footer .xyz {
+    border-bottom: solid 1px #555;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 2em;
+}
+
+.site-footer .xyz>div {
+    padding-left: 0;
+}
+
+.site-footer {
+    font-size: 11px;
+    padding: 30px 0 34px 0;
+    margin-top: 40px;
+    color: #636466;
+    background: #323334;
+}
+
+.pre-footer-one+.site-footer {
+    margin-top: 0;
+}
+
+.site-footer a {
+    color: #bebfc0;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+    color: #fff;
+}
+
+.site-footer p,
+.site-footer .list-inline {
+    font-size: 1em;
+    margin-bottom: 3px;
+    margin-left: 0;
+}
+
+.site-footer .list-inline li {
+    padding: 0;
+}
+
+.site-footer h3,
+.site-footer h2 {
+    font-family: "chaparral-pro", "Times New Roman", Times, serif;
+    font-size: 20px;
+    margin: 0 0 15px;
+    color: #bebfc1;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.site-footer ul {
+    font-size: 8px;
+    padding: 0;
+    /* margin-bottom: 40px; */
+    list-style: none;
+    text-align: center;
+}
+
+.site-footer li {
+    margin-bottom: 3px;
+}
+
+.site-footer .nav>li>a {
+    position: static;
+    display: inline;
+    padding: 0;
+}
+
+.site-footer .nav>li>a:hover,
+.site-footer .nav>li>a:focus {
+    color: #fff;
+    background: transparent;
+}
+
+.site-footer .payment-block ul {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.col-xs-4 a {
+    font-size: 25px;
+    font-family: 'Dr Sugiyama';
+}
+
+.payment-block li.icon-only {
+    display: inline-block;
+    width: 70px;
+    height: 34px;
+    padding: 0 5px;
+    line-height: 0;
+    text-indent: 5000px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.icon-paypal {
+    background-position: -240px 0;
+}
+
+.icon-mastercard {
+    background-position: -240px -60px;
+}
+
+.icon-visa {
+    background-position: -240px -120px;
+}
+
+.icon-maestro {
+    background-position: -240px -180px;
+}
+
+@media (min-width: 768px) {
+    .site-footer {
+        padding: 34px 0;
+    }
+    .site-footer h3,
+    .site-footer ul,
+    .site-footer h2 {
+        text-align: left;
+    }
+    .site-footer ul {
+        margin-bottom: 25px;
+    }
+    .site-footer .list-inline {
+        text-align: center;
+    }
+}
+
+.mailto{
+    position: fixed;
+    right: 5px;
+    z-index: 999;
+    bottom: 50%;
+    border-radius: 25px;
+}
+
+.mailto img{
+    border-radius: 25px;
+}
+
+.mailto img:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}

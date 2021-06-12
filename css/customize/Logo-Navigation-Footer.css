@@ -1,0 +1,488 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    /* text-decoration: #fff; */
+    list-style: none;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+            color:whitesmoke
+        }
+        .navbar-default .navbar-nav>li>a {
+            color: yellow;
+        }
+        .width{
+            width: 100%;
+        }
+        li{
+            list-style: none;
+            padding:5%;
+        }
+        li a{
+            text-align: center;
+        }
+        
+        .navbar{
+            background-image: url('../../images/background4.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        .nav1{
+            width: 36%;
+            
+            padding: 0;
+        }
+        .nav1 a{
+            font-size: 1.3em;
+            
+        }
+
+        [data-toggle="dropdown"]:hover{
+            background-image: url('../../images/background.jpg');
+            border-radius: 20%;
+        }  
+            
+        [data-toggle="dropdown"]:focus{
+            background-image: url('../../images/background.jpg');
+            color: yellow;
+            border-radius: 20%;
+           
+            
+        }
+        .dropdown-menu{
+            background-image: url('../../images/background.jpg');
+            border-radius: 10%;
+        }
+        .dropdown-menu a:hover{
+            background-image: url('../../images/black.jpg');
+        }
+
+        .nav2{
+            width: 30%;padding-left: 100px; padding-top: 15px;
+        }
+        .nav2 a{
+            font-size: 1.3em;
+            
+        }
+        .clip-text {
+            font-size: 6em;
+            font-weight: bold;
+            line-height: 1;
+            text-align: center;
+            color: #fff;
+            /*-------- chrome & safari*/
+            -webkit-background-clip: text;
+            -ms-background-clip: text;    
+            /*-------- end chrome & safari*/
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -ms-text-fill-color: transparent;
+            float: left;
+            width: 34%;
+            text-align: center;
+            background-image: url(../../images/hinh/SpicesAndCondiments/Sshow3.jpg);
+            
+            
+        }   
+        img.slide {
+            width: 100%;
+            height: 455px;
+           
+        }
+
+        .logo{
+            float: left;
+        }
+        .logo:hover{
+            border:yellowgreen 2px solid;
+            border-radius: 10px;
+        }
+   
+        img.slide:not(:first-child) {
+            display: none;
+        }
+        .container1 {
+            width: 805px;
+            height: 460px;
+            margin: 0 auto;
+            border: 2px solid #ccc;
+            position: relative;
+            padding: 0;
+        }
+        .container2 {
+            width: 90%;
+            margin-left: 150px; 
+            position: relative;
+            padding: 10px;
+        }
+        .container2 img{
+            width: 200px;
+            height: 200px;
+            border: darkgreen 2px solid;
+            border-radius: 10%;
+        }
+        .btn-change {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 25%;
+            transform: translateY(-100%);
+            
+        }
+
+        #next {
+            right: 300px;
+        }
+
+        #prev {
+            left: 300px;
+        }
+        .change-img {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        button {
+            background: olive;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 20px;
+            font-weight: bold;
+            border: none;
+        }
+
+        button.active {
+            background: olivedrab;
+            color: white;
+        }
+body,
+html {
+    /* height: 100%;
+    margin: 0; */
+    background: #eee;
+    z-index: -1000;
+}
+
+.clear {
+    clear: both;
+}
+
+
+/*---------------------logo & sub-information------------------*/
+
+.jumbotron {
+    padding: 0;
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+
+.logo-subinfo {
+    width: 100%;
+    top: 0px;
+}
+
+.navbar-1 {
+    float: left;
+    width: 33%
+}
+
+.navbar-1>ul {
+    list-style: none;
+}
+
+.navbar-1 li {
+    text-align: center;
+    float: left;
+    padding: 30px 0 30px 0;
+    width: 30%;
+}
+
+.navbar-1 a {
+    color: black;
+    font-size: 1.1em;
+}
+
+.navbar-2 {
+    float: left;
+    width: 33%;
+}
+
+.navbar-2>ul {
+    list-style: none;
+}
+
+.navbar-2 li {
+    text-align: center;
+    float: left;
+    padding: 30px 0 30px 0;
+    width: 20%;
+}
+
+.navbar-2 a {
+    color: black;
+    font-size: 1.1em;
+}
+
+
+
+/*---------------------End logo & sub-information------------------*/
+
+
+/* -------------------Navigation Bar--------------------------- */
+
+.navigation-bar {
+    margin: 0 0 70px 0;
+    padding: 0;
+    background: #f3efef;
+}
+
+.navigation-bar ul {
+    padding: 0;
+    position: absolute;
+    background: white;
+    width: 100%;
+}
+
+.navigation-bar li {
+    display: inline-block;
+    transform-style: preserve-3d;
+    width: 19.7%;
+}
+
+.navigation-bar a {
+    color: #262626;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.navigation-bar span {
+    display: block;
+    padding: 15px 20px;
+    width: 100%;
+}
+
+.navigation-bar span:before {
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    color: white;
+    padding: 15px 20px;
+    transform-style: preserve-3d;
+    transition: .5s;
+    transform: rotateX(90deg) translateY(50px);
+    transform-origin: bottom;
+    width: 100%;
+    text-align: center;
+}
+
+.navigation-bar span:hover:before {
+    transform: rotateX(0deg) translateY(0px);
+}
+
+.navigation-bar span:after {
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(79, 79, 202);
+    color: white;
+    padding: 15px 20px;
+    transform-style: preserve-3d;
+    transition: .5s;
+    transform: rotateX(0deg) translateY(0px);
+    transform-origin: top;
+    font-family: 'Dr Sugiyama';
+    width: 100%;
+    text-align: center;
+}
+
+.navigation-bar span:hover:after {
+    transform: rotateX(90deg) translateY(-5px);
+}
+
+
+/* ------------------End Navigation Bar------------------------ */
+
+
+.site-footer {
+		
+            
+		position: absolute;
+            padding:50px 0px 10px;
+            font-size:20px;
+            line-height:24px;
+            color:#242323;
+            width: 100%;
+            height: 350px;
+            
+          }
+        .site-footer hr{
+            border-top-color:#bbb;
+            opacity:0.5
+         }
+        .site-footer hr.small
+        {
+            margin:20px 0;
+        }
+        .site-footer h6
+        {
+            font-size: 20px;
+            color: black;
+            text-transform:uppercase;
+            margin-top:2px;
+            letter-spacing:2px;
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding-bottom: 5px;
+        }
+        .site-footer a
+        {
+            color:#242323;
+        }
+        .site-footer a:hover
+        {
+            color:yellow;
+            text-decoration:none;
+        }
+        .footer-links
+        {
+            padding-left:0;
+            list-style:square;
+            font-size: 20px;
+            
+        }   
+        .footer-links li
+        {
+            display:block;
+            font-size: 18px;
+            padding: 5px;
+            
+        }
+        .footer-links a
+        {
+            color:#242323; 
+        }
+        .footer-links img:hover{
+            background-image: url('/Users/A/Desktop/Bài Tập/Gui_SV_EPrj/images/face.png');
+        }
+        .footer-links a:active,.footer-links a:focus,.footer-links a:hover
+        {
+            color:yellow;
+            text-decoration:none;
+        }
+        .footer-links.inline li
+        {
+            display:inline-block;
+        }
+              
+        .copyright-text
+        {
+            margin: 0;
+            padding-left: 120px;
+        }
+
+
+.payment-block li.icon-only {
+    display: inline-block;
+    width: 70px;
+    height: 34px;
+    padding: 0 5px;
+    line-height: 0;
+    text-indent: 5000px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.icon-paypal {
+    background-position: 1000px;
+}
+
+.icon-mastercard {
+    background-position: -240px -60px;
+}
+
+.icon-visa {
+    background-position: -240px -120px;
+}
+
+.icon-maestro {
+    background-position: -240px -180px;
+}
+
+@media (min-width: 768px) {
+    .site-footer {
+        padding: 34px 0;
+    }
+    .site-footer h3,
+    .site-footer ul,
+    .site-footer h2 {
+        text-align: left;
+    }
+    .site-footer ul {
+        margin-bottom: 25px;
+    }
+    .site-footer .list-inline {
+        text-align: center;
+    }
+}
+
+.mailto{
+    position: fixed;
+    right: 5px;
+    z-index: 999;
+    bottom: 50%;
+    border-radius: 25px;
+}
+
+.mailto img{
+    border-radius: 25px;
+}
+
+.mailto img:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}

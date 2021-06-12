@@ -1,0 +1,91 @@
+/*----------------- 4 types of Product -------------*/
+
+.ceiling {
+    width: 48%;
+    height: 120px;
+    float: left;
+    text-align: center;
+}
+
+.table {
+    width: 48%;
+    height: 120px;
+    float: right;
+    text-align: center;
+}
+
+.ceilingfan img,
+.tablefan img {
+    border-radius: 20px;
+}
+
+.ceilingfan {
+    width: 48%;
+    height: 300px;
+    float: left;
+}
+
+.tablefan {
+    width: 48%;
+    height: 300px;
+    float: right;
+}
+
+.ceilingfan img {
+    width: 100%;
+    height: 90%;
+}
+
+.tablefan img {
+    width: 100%;
+    height: 90%;
+}
+.containerpro{
+    height: 530px;
+    width:70%;
+    margin: 0 auto;
+    background: rgb(0, 0, 0);
+    border-radius: 20px;
+    position: absolute;
+    left: 16%;
+    top: 50px;
+}
+.Exhaust-Air {
+    list-style: none;
+    height: 520px;
+    /* border: thin solid black; */
+    margin: 0 auto;
+
+}
+
+.Exhaust-Air li {
+    width: 49%;
+    height: 48%;
+    float: left;
+    text-align: center;
+    border: thin solid;
+    margin: 10px 0px 5px 5px;
+    border-radius: 20px;
+    text-decoration: none;
+    top: -100px;
+
+}
+
+.Exhaust-Air img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+hr {
+    color: red;
+    border: thin solid;
+    width: 70%;
+}
+
+.background{
+    height: 200px;
+    background-image: url(../../IMGS/background/14.jpg);
+    background-size: 100% 100%;
+    position: relative;
+}

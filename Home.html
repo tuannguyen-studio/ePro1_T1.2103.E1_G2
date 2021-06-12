@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jQuery/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/customize/Logo-Navigation-Footer.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Scroll to top -->
+    <script type="text/javascript" src="http://arrow.scrolltotop.com/arrow79.js"></script>
+    <style>
+
+        .width{
+            width: 100%;
+        }
+        li{
+            list-style: none;
+            padding:5%;
+        }
+        li a{
+            text-align: center;
+        }
+        
+        .navbar{
+            background-image: url('./images/background.jpg');
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        .nav1{
+            width: 36%;
+            
+            padding: 0;
+        }
+        .nav1 a{
+            font-size: 1.8em;
+            
+        }
+        .dropdown-toggle{
+            background-image: url('./images/background.jpg');
+            border-radius: 50%;
+        }
+        .dropdown-menu{
+            background-image: url('./images/background.jpg');
+            border-radius: 10%;
+        }
+        .dropdown-menu a:hover{
+            background-image: url('./images/black.jpg');
+        }
+
+        .clip-text {  
+            background-image: url('./images/hinh/SpicesAndCondiments/Sshow3.jpg');
+            margin-top: 20px;
+        }
+        .nav2{
+            width: 30%;padding-left: 120px;
+        }
+        .nav2 a{
+            font-size: 1.8em;
+        
+        }
+        img.slide {
+            width: 100%;
+            height: 455px;
+           
+        }
+
+        .logo{
+            float: left;
+        }
+   
+        img.slide:not(:first-child) {
+            display: none;
+        }
+        .container1 {
+            width: 805px;
+            height: 460px;
+            margin: 0 auto;
+            border: 2px solid #ccc;
+            position: relative;
+            padding: 0;
+        }
+        .container2 {
+            width: 74%;
+            margin: 0 auto; 
+            position: relative;
+            padding: 10px;
+        }
+        .container2 img{
+            width: 200px;
+            height: 200px;
+            border: black 1px solid;
+            border-radius: 10%;
+        }
+        .btn-change {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 18%;
+            transform: translateY(-100%);
+            
+        }
+
+        #next {
+            right: 300px;
+        }
+
+        #prev {
+            left: 300px;
+        }
+        .change-img {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        button {
+            background: olive;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 20px;
+            font-weight: bold;
+            border: none;
+        }
+
+        button.active {
+            background: olivedrab;
+            color: white;
+        }
+
+    </style>
+</head>
+<body background="./images/hinh/cua hang/ch8.jpeg">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- container-fluid để co giãn theo kích thước web << >> -->
+            <ul class="nav1 nav navbar-nav">
+                <a class="logo" href="Home.html"><div><img style="width: 120px;" src="./images/logo.png" alt=""></div></a>
+                <li><a style="color: yellow" href="Profile.html">About Us</a></li>
+                <li class="dropdown">
+                    <a style="color: yellow" href="#" class="dropdown-toggle" data-toggle="dropdown">Products <span class="caret">
+                        <!-- caret là mũi tên --></span></a>
+                        <!-- dropdown-toggle là thả xuống -->
+                    <ul class="dropdown-menu">
+                        <li><a style="color: rgb(212, 212, 99)" href="Vegetable.html">Vegetables</a></li>
+                        <li><a style="color: rgb(212, 212, 99)" href="Grains.html">Grains</a></li>
+                        <li><a style="color: rgb(212, 212, 99)" href="Fruits.html">Fruits</a></li>
+                        <li><a style="color: rgb(212, 212, 99)" href="Spices.html">Spices</a></li>
+                    </ul></li>                
+            </ul>
+            <div class="clip-text"><a href="Profile.html" >Star Organic</a></div>
+            <ul class="nav2 nav navbar-nav">
+                <li><a style="color: yellow;" href="Gallery.html">Our Gallery</a></li>
+                <li><a style="color: yellow;" href="Contact.html">Contact Us</a></li>  
+            </ul>           
+        </div>
+   
+        <!-- Slideshow -->
+        
+
+        
+        <div style="background-image: url('./images/hinh/cua hang/ch1.jpg');background-repeat: no-repeat;">
+            <div class="container1">
+                <img class="slide" src="./images/Misc/slideshow1.jpg" idx="0" alt="">
+                <img class="slide" src="./images/Misc/slidewhow2.jpg" idx="1" alt="">
+                <img class="slide" src="./images/Misc/slideshow5.jpg" idx="2" alt="">
+                <img class="slide" src="./images/Misc/slideshow6.jpg" idx="3" alt="">
+            </div>
+            <img class="btn-change" id="next" src="./images/arrow-right.png" alt="">
+            <img class="btn-change" id="prev" src="./images/arrow-left.png" alt="">
+    
+            <div class="change-img">
+                <button class="active" idx="0">1</button>
+                <button idx="1">2</button>
+                <button idx="2">3</button>
+                <button idx="3">4</button>
+            </div>
+        </div>
+            <script>
+                $(document).ready(function() {
+                    var stt = 0;
+                    var endImg = $("img.slide:last").attr("idx");   
+
+                var interval;
+                var timer = function () {
+                        interval = setInterval(function () {
+                            $("#next").click();
+                        }, 5000);
+                    };
+                    timer();
+                    var changeImg = function(stt) {
+                        $("img.slide").hide();
+                        $("img.slide").eq(stt).fadeIn(500);
+                        $("button").removeClass("active");
+                        $("button").eq(stt).addClass("active");
+                        
+                        clearInterval(interval);
+                        timer();
+                    };
+        
+                    $("button").click(function() {
+                        stt = $(this).attr("idx");
+                        
+                        changeImg(stt);
+                    });
+        
+                    $("#next").click(function() {
+                        if(++stt > endImg) {
+                            stt = 0;
+                        }
+                        
+                        changeImg(stt);
+                    });
+        
+                    $("#prev").click(function() {
+                        if(--stt < 0) {
+                            stt = endImg;
+                        }
+                        
+                        changeImg(stt);
+                    });
+                    setInterval(function () {
+                        $("#next").click();
+                    }, 5000);
+                
+            });
+        
+        </script>
+    <!-- End Slide Show -->
+    
+   
+    
+    <div class="container2">
+    <a href="Grains.html"><img src="./images/hinh/beans/b1.png" alt=""></a>
+    <a href="Grains.html"><img src="./images/hinh/beans/b2.png" alt=""></a>
+    <a href="Grains.html"><img src="./images/hinh/beans/b3.jpg" alt=""></a>
+    <a href="Grains.html"><img src="./images/hinh/beans/b4.png" alt=""></a>
+    <a href="Grains.html"><img src="./images/hinh/beans/b5.png" alt=""></a>
+    <a href="Grains.html"><img src="./images/hinh/beans/b6.png" alt=""></a>
+
+    </div>
+    <br>
+    <div class="container2">
+    <a href="Grains.html"><img src="./images/hinh/nuts & seeds/n1.png" alt=""></a>
+    <a href="Grains.html"><img src="./images/hinh/nuts & seeds/n2.jpg" alt=""></a>
+    <a href="Grains.html"><img src="./images/hinh/nuts & seeds/n3.jpg" alt=""></a>
+    <a href="Grains.html"><img src="./images/hinh/nuts & seeds/n4.jpg" alt=""></a>
+    <a href="Grains.html"><img src="./images/hinh/nuts & seeds/n5.jpg" alt=""></a>
+    <a href="Grains.html"><img src="./images/hinh/nuts & seeds/n6.jpg" alt=""></a>
+    </div>
+    <br>
+    
+    <div class="container2">
+    <a href="Fruits.html"><img src="./images/hinh/Fruits/f1.jpg" alt=""></a>
+    <a href="Fruits.html"><img src="./images/hinh/Fruits/f2.png" alt=""></a>
+    <a href="Fruits.html"><img src="./images/hinh/Fruits/f4.png" alt=""></a>
+    <a href="Fruits.html"><img src="./images/hinh/Fruits/f8.jpg" alt=""></a>
+    <a href="Fruits.html"><img src="./images/hinh/Fruits/f11.jpg" alt=""></a>
+    <a href="Fruits.html"><img src="./images/hinh/Fruits/f6.png" alt=""></a>
+</div>
+    <br>
+    
+
+    <!-- Mail to -->
+       <div class="mailto">
+        <a href="mailto:nguyenngocnguyen.rtc@gmail.com?Subject=Support" target="_top">
+            <img src="./images/mail.png" alt="Mail to us" width="50px" height="50px">
+        </a>
+    </div>
+    <!-- End mail to -->
+
+<!-- Site footer -->
+<footer class="site-footer" style="background-image: url('./images/hinh/cua hang/ch11.jpg');background-repeat: round;">
+        <div class="container-fluid" style="height: 350px;">
+          <div class="row" style="margin-left: 150px; ">
+            <div class="col-xs-6 col-md-3" >
+              <h6>Our Locations</h6>
+              <ul class="footer-links"> 
+                <li><a href="Contact.html">Ho Chi Minh City</a></li>
+               <li><a href="Contact.html">Da Nang City</a></li>
+                <li><a href="Contact.html">Ha Noi City</a></li>
+              </ul>
+             </div>
+              
+            <div class="col-xs-6 col-md-3" >
+              <h6>Products</h6>
+              <ul class="footer-links">
+                <li><a href="Vegetable.html" >Vegetables</a></li>
+                <li><a href="Grains.html">Grains and Beans</a></li>
+                <li><a href="Fruits.html">Fruits</a></li>
+                <li><a href="Spices.html">Spices and Condiments</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-xs-6 col-md-3">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+                <li ><a href="Home.html">Home</a></li>
+                <li><a href="Gallery.html">Our Gallery</a></li>
+                <li><a href="Profile.html">About Us</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <h6>Follow Us</h6>
+              <ul class="footer-links">
+                <li ><a href="https://www.facebook.com/">Facebook</a></li>
+                <li><a href="https://stc.chat.zalo.me/">Zalo</a></li>
+                <li><a href="https://twitter.com/" >Tweeter</a></li>
+                <li><a href="https://www.viber.com/en/" >Viber</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr style="border:double purple; width: 90%; margin-left: 60px;"></hr>
+          <!--Extra Information-->       
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12" >
+              <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by <a href="Home.html">Star Organic Company</a>.</p>            
+            </div>          
+        </div>                        
+  </footer>
+    </nav>     
+</body>
+</html>

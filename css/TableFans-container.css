@@ -1,0 +1,298 @@
+.container-fluid {
+    width: 100%;
+    height: auto;
+    /* background: red; */
+}
+
+.toppick {
+    text-align: center;
+    font-family: "Dr Sugiyama";
+    font-size: 7em;
+}
+
+.container-toppick {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.container-toppick .box {
+    width: 13.5%;
+    text-align: center;
+    line-height: 300px;
+    flex-grow: 1;
+    background-size: cover;
+    background-position: center;
+    transition: 1s;
+}
+
+.container-toppick .box:nth-child(1) {
+    background: url(../../IMGS/Table_Fans/AnemosAdamAntiqueBrass.jpg);
+    background-size: 100% 100%;
+}
+
+.container-toppick .box:nth-child(2) {
+    background: url(../../IMGS/Table_Fans/AnemosBoum.jpg);
+    background-size: 100% 100%;
+}
+
+.container-toppick .box:nth-child(3) {
+    background: url(../../IMGS/Table_Fans/AnemosClock.jpg);
+    background-size: 100% 100%;
+}
+
+.container-toppick .box:nth-child(4) {
+    background: url(../../IMGS/Table_Fans/AnemosLewis.jpg);
+    background-size: 100% 100%;
+}
+
+.container-toppick .box:nth-child(5) {
+    background: url(../../IMGS/Table_Fans/AnemosMiniJetMilky.jpg);
+    background-size: 100% 100%;
+}
+
+.container-toppick .box:nth-child(6) {
+    background: url(../../IMGS/Table_Fans/AnemosPortBrookSN.jpg);
+    background-size: 100% 100%;
+}
+
+.container-toppick .box:nth-child(7) {
+    background: url(../../IMGS/Table_Fans/AnemosRetro.jpg);
+    background-size: 100% 100%;
+}
+
+.container-toppick .box h2 {
+    margin: 0;
+    padding: 0;
+    line-height: 300px;
+    background: rgba(119, 119, 119, 0.8);
+    transition: .5s;
+    bottom: 0;
+}
+
+.container-toppick .box h2 span {
+    background: rgba(255, 255, 255, 0);
+    width: 100%;
+    text-align: center;
+    transition: 1s;
+    color: white;
+}
+
+.box:hover h2 span {
+    color: #262626;
+    background: rgba(255, 255, 255, 0.8);
+    letter-spacing: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .8);
+}
+
+.box:hover h2 {
+    background: rgba(0, 0, 0, 0);
+}
+
+.box:hover {
+    width: 23%;
+    text-decoration: none;
+}
+
+.box a {
+    text-decoration: none;
+}
+
+
+/* Grid of products */
+
+.content {
+    width: 100%;
+    height: auto;
+    /* background: blue; */
+    margin-top: 30px
+}
+
+.gridOfProducts {
+    width: 80%;
+    height: 900px;
+    /* background: black; */
+    float: left;
+}
+
+.gridOfProducts ul {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+}
+
+.mainContainer {
+    position: relative;
+    width: 24%;
+    height: 32.5%;
+    /* background: teal; */
+    float: left;
+    margin: 3px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -ms-transition: all 2s ease;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(360deg);
+}
+
+.front {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    background: white;
+    transform: perspective(800px) rotateY(0deg);
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+}
+
+.back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    background: #eee;
+    transform: rotateY(180deg);
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+}
+
+.card:hover .back {
+    -moz-transform: perspective(800px) rotateY(0);
+    -ms-transform: perspective(800px) rotateY(0);
+}
+
+.front img {
+    width: 100%;
+    height: 80%;
+}
+
+.front span {
+    font-style: italic;
+    color: red;
+}
+
+.front p,
+.back h3 {
+    text-transform: uppercase;
+}
+
+.back img {
+    width: 100%;
+    height: 100%;
+}
+
+.overlay-1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(105, 98, 98, 0.9);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: 1s ease;
+}
+
+.back:hover .overlay-1 {
+    width: 100%;
+}
+
+.overlay-2 {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(105, 98, 98, 0.9);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: 1s ease;
+}
+
+.back:hover .overlay-2 {
+    bottom: 0;
+    height: 100%;
+}
+
+.overlay-3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(105, 98, 98, 0.9);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: 1s ease;
+}
+
+.back:hover .overlay-3 {
+    height: 100%;
+}
+
+.overlay-4 {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    background-color: rgba(105, 98, 98, 0.9);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: 1s ease;
+}
+
+.back:hover .overlay-4 {
+    width: 100%;
+    left: 0;
+}
+
+.text {
+    /* white-space: nowrap; */
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-70%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    /* overflow: auto; */
+}
+
+.advertising {
+    width: 20%;
+    height: 900px;
+    background: yellow;
+    float: right;
+}
+
+.advertising ul {
+    width: 100%;
+    height: 100%;
+}
+
+.advertising ul li {
+    width: 100%;
+    height: 25%;
+}
+
+.advertising ul li img {
+    width: 100%;
+    height: 100%;
+}

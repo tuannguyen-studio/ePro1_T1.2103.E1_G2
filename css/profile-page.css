@@ -1,0 +1,21 @@
+
+    .h1
+    {
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .div
+    {
+        border-style: 5px solid;
+        padding: 5px;
+        background-color: honeydew;
+    }
+    .img
+    {
+        text-align: center;
+    }
+    img.sshow
+    {
+        width: 1525px;
+        height: 220px;
+    }

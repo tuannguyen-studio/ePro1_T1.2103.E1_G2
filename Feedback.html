@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Logo-Navigation-Footer.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/Gallery-Feedback.css">   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<script>
+function Check(){
+            var name=document.getElementById("txtName").value;
+            if(name.length==0)
+                {
+                alert("Name cannot be blank. Please Re-enter!");
+                document.getElementById("txtName").focus();
+                return;
+                }
+            var email=document.getElementById("txtEmail").value;
+            if(email.length==0)
+                {
+                alert("Email cannot be blank");
+                document.getElementById("txtEmail").focus();
+                return;
+                }   
+            var phone=document.getElementById("txtTel").value;
+            if(phone.length==0)
+                {
+                alert("Phone number cannot be blank");
+                document.getElementById("txtTel").focus();
+                return;
+                } 
+            var info="";
+            info +="Congratulation!"+"\n";
+            info +="Your Feedback Information has been created successfully!"+"\n";
+            alert(info);  
+        }
+</script>
+<body >
+  <!-- Site header -->
+  <nav class="navbar navbar-default">
+      <div class="container-fluid">        
+        <ul class="menu nav navbar-nav" style="width: 100%;">
+              <li  class="logo"><a href=""><img style="width: 120px;" src="images/Logos/logo.png" alt=""></a></li>
+              <li style="margin-top: 30px; padding-right: 60px; padding-left: 100px; "><a style="color: black;" href="Home.html">Home</a></li>                
+              <li class="dropdown-toggle" style="margin-top: 30px; padding-right: 60px;">
+                  <a href="#" data-toggle="dropdown" class="dropdown-toggle" style="color: black;">Products<span class="caret"></span></a>
+                    <ul class="dropdown-menu" >
+                        <li><a href="Vegetable.html" style="color: yellow;">Vegetables</a></li>
+                        <li><a href="Grains.html" style="color: yellow;">Grains and Beans</a></li>
+                        <li><a href="Fruits.html" style="color: yellow;">Fruits</a></li>
+                        <li><a href="Spices.html"style="color: yellow;">Spices and Condiments</a></li></ul></li>                     
+              <li style="margin-top: 30px; padding-right: 60px; "><a style="color: black;" href="Gallery.html" >Our Gallery</a></li>                    
+              <li style="margin-top: 30px; padding-right: 60px; "><a style="color: black;" href="Profile.html" >About Us</a></li>         
+              <li style="margin-top: 30px; padding-right: 20px; "><a style="color: black;" href="Contact.html" >Contact Us</a></li>
+        </ul>                         
+      </div>
+     
+
+    <!-- Site form -->
+    <div class="container" style="width: 40%; height: 650px;border: red dotted; border-radius: 5%; margin-top: 15px;">
+       <form action="" style="padding: 15px;">
+            <legend style="text-align: center; font-size: 30px; padding-top: 15px;"><b>Feedback Information</b></legend>         
+            <div class="form-group">
+                <label for="txtName">Your Name</label>
+                <input id="txtName" name="txtName" placeholder="Enter your Full name" class="form-control" required/>
+            </div>
+            <div class="form-group">
+                <label for="txtEmail">Your Email</label>
+                <input type="email" id="txtEmail" name="txtEmail" placeholder="Enter your Email" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label for="txtTel">Your Telephone</label>
+              <input type="tel" id="txtTel" name="txtTel" placeholder="Enter your Phone Number" class="form-control" required/>
+          </div>
+          <div class="form-group">
+            <label for="txtTel">Your Comment</label>
+            <textarea cols="30" rows="8" name="txaTxt" id="txaTxt" class="form-control"></textarea>
+          </div>
+          <div class="form-group" style="text-align: center;"  >
+            <button type="button" id="bntSubmit" name="bntSubmit" class="bnt btn-danger" value="SUBMIT" onclick="Check()">SUBMIT</button>
+            <button type="reset" id="bntReset" name="bntReset" class="bnt btn-primary">RESET</button>
+          </div>    
+      </form>
+    </div>
+  
+
+    <!-- Site footer -->
+    <footer class="site-footer" >
+        <div class="container-fluid">
+          <div class="row" style="margin-left: 120px; ">
+            <div class="col-xs-6 col-md-3" >
+              <h6>Our Locations</h6>
+              <ul class="footer-links"> 
+                <li><a href="Contact.html">Ho Chi Minh City</a></li>
+               <li><a href="Contact.html">Da Nang City</a></li>
+                <li><a href="Contact.html">Ha Noi City</a></li>
+              </ul>
+             </div>
+              
+            <div class="col-xs-6 col-md-3" >
+              <h6>Products</h6>
+              <ul class="footer-links">
+                <li><a href="Vegetable.html" >Vegetables</a></li>
+                <li><a href="Grains.html">Grains and Beans</a></li>
+                <li><a href="Fruits.html">Fruits</a></li>
+                <li><a href="Spices.html">Spices and Condiments</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-xs-6 col-md-3">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+                <li ><a href="Home.html">Home</a></li>
+                <li><a href="Gallery.html" >Our Gallery</a></li>
+                <li><a href="Profile.html" >About Us</a></li>
+                <li><a href="Contact.html" >Contact Us</a></li>
+              </ul>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <h6>Follow Us</h6>
+              <ul class="footer-links">
+                <li ><a href="https://www.facebook.com/"><img src="https://img.icons8.com/android/24/000000/facebook-new.png"/> Facebook</a></li>
+                <li><a  href="https://stc.chat.zalo.me/"><img src="https://img.icons8.com/ios-filled/25/000000/zalo.png"/> Zalo</a></li>
+                <li><a href="https://twitter.com/" ><img src="https://img.icons8.com/android/24/000000/twitter.png"/> Tweeter</a></li>
+                <li><a href="https://www.viber.com/en/" ><img src="https://img.icons8.com/fluent-systems-filled/24/000000/viber.png"/> Viber</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr style="border:double purple; width: 90%; margin-left: 60px; "></hr>
+          <!--Extra Information-->       
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12" >
+              <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by <a href="Home.html">Star Organic Company</a>.</p>            
+            </div>          
+        </div>                        
+    </footer>
+  </nav>  
+</body>
+</html>
